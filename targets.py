@@ -22,7 +22,7 @@ class Targets(Resource):
         request.get_json(force=True)
         args = parser.parse_args()
 
-        TARGETS = args.copy()
+        TARGETS['targets'] = args['targets']
 
         print("Args")
         print(args)
