@@ -14,8 +14,6 @@ TARGETS = {
 
 class Targets(Resource):
     def get(self):
-        print("Getting")
-        print(TARGETS)
         return TARGETS
 
     def post(self):
@@ -23,11 +21,6 @@ class Targets(Resource):
         args = parser.parse_args()
 
         TARGETS['targets'] = args['targets']
-
-        print("Args")
-        print(args)
-        print("TARGETS")
-        print(TARGETS)
 
         return TARGETS
 
